@@ -1,2 +1,2 @@
-# modx-Apper
-Component for development MODX apps without manager
+# modx-packageTemplate
+Template for creating modx packages with https://github.com/SintezCode/modx-packageBuilder2
