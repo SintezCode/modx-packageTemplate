@@ -1,15 +1,21 @@
 {
-  "name": "SintezCode/modx-packageTemplate",
+  "name": "sintez-code/modx-package-template",
   "description": "Template for creating MODX packages",
   "minimum-stability": "stable",
   "license": "BSD 3-Clause",
   "authors": [
     {
       "name": "SintezCode",
-      "email": "unarmedf@gmail.com.com"
+      "email": "unarmedf@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/SintezCode/modx-packageBuilder2"
     }
   ],
   "require": {
-    
+    "sintez-code/modx-package-builder2": "*@dev"
   }
 }
