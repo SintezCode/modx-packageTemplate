@@ -1,5 +1,6 @@
 <?php
 require_once('.modx.php');
+require_once MODX_CORE_PATH.'model/modx/modx.class.php';
 require_once('vendor/autoload.php');
 
 use SintezCode\packageBuilder;
