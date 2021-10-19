@@ -1,3 +1,0 @@
-<?php
-define('MODX_CORE_PATH', 'Your MODX core path');
-define('MODX_CONFIG_KEY','config');
