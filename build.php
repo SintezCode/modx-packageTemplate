@@ -1,14 +1,20 @@
 <?php
-require_once('.modx.php');
+require_once('config.inc.php');
 require_once MODX_CORE_PATH.'model/modx/modx.class.php';
 require_once('vendor/autoload.php');
 
-use SintezCode\packageBuilder;
-use SintezCode\modXLocal;
+use SintezCode\MODX\Package;
+use SintezCode\MODX\packageBuilder;
 
-$modx= new modXLocal();
+$modxClass=MODX_BASE_CLASS;
+$modx= new $modxClass();
 $modx->initialize('mgr');
-$modx->setLogLevel(modX::LOG_LEVEL_INFO);
+$modx->setLogLevel($modxClass::LOG_LEVEL_INFO);
 $modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML');
 
-new packageBuilder($modx);
+$package=new Package('package.json');
+$package->increaseVersion();
+$package->saveTo('package.json');
+
+$builder=new packageBuilder($modx,$package);
+$builder->build();
