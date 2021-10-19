@@ -6,7 +6,7 @@ require_once('vendor/autoload.php');
 use SintezCode\MODX\Package;
 use SintezCode\MODX\packageBuilder;
 
-$modxClass=MODX_BASE_CLASS;
+$modxClass=MODX_BASE_CLASS?:'SintezCode\MODX\modXLocal';
 $modx= new $modxClass();
 $modx->initialize('mgr');
 $modx->setLogLevel($modxClass::LOG_LEVEL_INFO);
