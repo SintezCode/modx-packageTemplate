@@ -16,6 +16,7 @@
     }
   ],
   "require": {
-    "sintez-code/modx-package-builder2": "*@dev"
+    "sintez-code/modx-package-builder2": "*@dev",
+    "ext-json": "*"
   }
 }
